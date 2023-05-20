@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "work-3"
+version = "0.1.0"
+description = ""
+authors = ["ViolettaP <violetta.pukhova@mail.ru>"]
+readme = "README.md"
+packages = [{include = "work_3"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+datetime = "^5.1"
+jsons = "^1.6.3"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.3.1"
+pytest-cov = "^4.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
