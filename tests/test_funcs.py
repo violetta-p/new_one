@@ -1,5 +1,5 @@
 import pytest
-from src.funcs import *
+from src import funcs
 
 
 @pytest.fixture
@@ -22,16 +22,16 @@ def dict_fixture_miss():
 
 
 def test_get_date(dict_fixture):
-    assert get_date(dict_fixture["date"]) == "26.08.2019"
+    assert funcs.get_date(dict_fixture["date"]) == "26.08.2019"
 
 
 def test_get_sender(dict_fixture):
-    assert get_sender(dict_fixture["from"]) == "Maestro 1596 83** **** 5199"
+    assert funcs.get_sender(dict_fixture["from"]) == "Maestro 1596 83** **** 5199"
 
 
 def test_get_recipient(dict_fixture):
-    assert get_recipient(dict_fixture["to"]) == "Счет **9589"
+    assert funcs.get_recipient(dict_fixture["to"]) == "Счет **9589"
 
 
 def test_if_data_missing(dict_fixture_miss):
-    assert get_sender(dict_fixture_miss.get("from", None)) == "No info about sender"
+    assert funcs.get_sender(dict_fixture_miss.get("from", None)) == "No info about sender"

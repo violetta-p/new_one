@@ -10,6 +10,7 @@ packages = [{include = "work_3"}]
 python = "^3.10"
 datetime = "^5.1"
 jsons = "^1.6.3"
+pytest-cov = "^4.0.0"
 
 
 [tool.poetry.group.dev.dependencies]

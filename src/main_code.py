@@ -1,7 +1,7 @@
 import json
 import datetime
 import os
-from funcs import *
+from src.funcs import *
 
 
 def load_data(file_name):
@@ -13,7 +13,6 @@ def load_data(file_name):
     full_path_to_data = os.path.join(os.path.abspath('..'), file_name)
     with open(full_path_to_data, 'r', encoding='utf-8') as file_with_json:
         return file_with_json.read()
-
 
 def get_all_data(payment):
     """
